@@ -9,7 +9,7 @@
 git clone --depth 1 https://github.com/behdad088/BookStore.git
 
 # change directory to this repo
-cd BookStore, then run the book.sln file and run the Web API application
+go to BookStore directory, then run the book.sln file and run the Web API application
 
 
 ```

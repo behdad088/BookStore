@@ -1,0 +1,143 @@
+.toast-top-center {
+  top: 185px;
+}
+
+$nav-height: 50px;
+$border-color: #acc1cd;
+$menu-item-padding: 0 15px;
+
+body {
+  background-color: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.alert-right-small{
+  margin-left:10px;padding: 6px;
+}
+
+.active{
+  background-color: #00b0e8;
+}
+
+.table-button{
+  padding: 0px 10px;
+}
+
+h4,label{
+  color: #31708f;
+}
+
+.page-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #fff;
+  border-bottom: solid 1px $border-color;
+}
+
+.logo,
+.main-menu,
+.user {
+  line-height: $nav-height;
+}
+
+.logo {
+  padding: 0 10px;
+}
+
+.user {
+  padding: 0 15px;
+  background: #f90;
+  color: #fff;
+}
+
+.main-menu {
+  font-size: 16px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 9999;
+  height: $nav-height;
+
+  > .menu-item {
+    vertical-align: top;
+    border-right: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+    border-left: solid 1px transparent;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      border-right-color: $border-color;
+      border-bottom: solid 1px #fff;
+      border-left-color: $border-color;
+      background: #f90;
+      background: -moz-linear-gradient(top, #f90 0%, #f90 16%, #fff 16%, #fff 100%);
+      background: -webkit-linear-gradient(top, #f90 0%, #f90 16%, #fff 16%, #fff 100%);
+      background: linear-gradient(to bottom, #f90 0%, #f90 16%, #fff 16%, #fff 100%);
+    }
+
+    .menu-item-link {
+      display: inline-block;
+      padding: $menu-item-padding;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}
+
+.categories-container {
+  background-color: #fff;
+  position: absolute;
+  top: $nav-height + 1px;
+  right: 0;
+  left: 0;
+
+  .categories {
+    line-height: normal;
+    padding-top: 20px;
+    margin-left: 0;
+    display: none;
+    border-bottom: solid 1px $border-color;
+    -webkit-box-shadow: 0px 10px 50px -15px rgba(133,133,133,1);
+    -moz-box-shadow: 0px 10px 50px -15px rgba(133,133,133,1);
+    box-shadow: 0px 10px 50px -15px rgba(133,133,133,1);
+
+    > .category {
+      vertical-align: top;
+
+      + .category {
+        margin-left: 40px;
+      }
+
+      .category-name {
+        color: #f90;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: $menu-item-padding;
+      }
+
+      .category-menu {
+        margin: 10px 0;
+
+        .category-menu-item {
+          line-height: 35px;
+
+          .category-menu-item-link {
+            display: block;
+            padding: $menu-item-padding;
+            color: #222;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+              background-color: #e2e2e2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<ul class="main-menu list-unstyled list-inline text-center">
+  <li class="menu-item" *ngFor="#item of menuItems" (mouseover)="showCategories($event.target, item)" (mouseout)="hideCategories()">
+    <a class="menu-item-link" [routerLink]="item.routerLink" *ngIf="item.routerLink">{{ item.name }} </a>
+    <span class="menu-item-link" *ngIf="!item.routerLink">{{ item.name }} </span>
+    <div class="categories-container">
+      <ul class="categories list-unstyled list-inline text-left" [class.show]="item.active" [style.padding-left.px]="paddingLeft" *ngIf="item.categories">
+        <li class="category" *ngFor="#category of item.categories">
+          <category [category]="category" (publisherSelected)="hideCategories()"></category>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>

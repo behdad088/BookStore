@@ -1,0 +1,7 @@
+<div class="category-name">{{ category.name }}</div>
+
+<ul class="category-menu list-unstyled">
+  <li class="category-menu-item" *ngFor="#item of category.items">
+    <a class="category-menu-item-link" [routerLink]="item.routerLink" (click)='itemClicked()'>{{ item.name }}</a>
+  </li>
+</ul>

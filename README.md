@@ -4,7 +4,7 @@
 
 ```bash
 
-# clone our repo
+# clone this repo
 # --depth 1 removes all but one .git commit history
 git clone --depth 1 https://github.com/behdad088/BookStore.git
 
